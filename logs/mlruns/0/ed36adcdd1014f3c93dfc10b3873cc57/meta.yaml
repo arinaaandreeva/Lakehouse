@@ -1,0 +1,15 @@
+artifact_uri: file:///app/logs/mlruns/0/ed36adcdd1014f3c93dfc10b3873cc57/artifacts
+end_time: 1746185755906
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ed36adcdd1014f3c93dfc10b3873cc57
+run_name: BronzeLayer
+run_uuid: ed36adcdd1014f3c93dfc10b3873cc57
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746185735102
+status: 4
+tags: []
+user_id: root

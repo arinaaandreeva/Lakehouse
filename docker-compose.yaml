@@ -1,0 +1,28 @@
+services:
+  spark:
+    build: .
+    container_name: spark
+    ports:
+      - "4040:4040"  # Spark 
+      - "8080:8080"  # 
+    volumes:
+      - ./data:/app/data
+      - ./podcasts.csv:/app/data/podcasts.csv 
+      # - ./podcasts.csv:/app/podcasts.csv
+      - ./src:/app/src
+      - ./logs:/app/logs
+    environment:
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=python3
+      - SPARK_HOME=/opt/bitnami/spark
+      - SPARK_DRIVER_MEMORY=1g
+      - SPARK_EXECUTOR_MEMORY=1g
+    networks:
+      - spark-net
+    deploy:
+          resources:
+            limits:
+              memory: 2G
+networks:
+  spark-net:
+    driver: bridge
